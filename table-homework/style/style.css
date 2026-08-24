@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+table {
+    border-spacing: 0;
+    margin: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+td, th, caption {
+    border: 1px solid #000;
+    border-collapse: collapse; 
+
+}
+
+caption {
+    border-bottom: none;
+    font-weight: 700;
+    font-size: large;
+}
+
+.free {
+    color: red;
+    font-weight: 600;
+}
