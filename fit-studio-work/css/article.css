@@ -1,0 +1,89 @@
+html {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+}
+
+body * {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  /* Это центрирование контента внутри контейнера */
+  padding: 0 10px;
+}
+
+.article {
+  padding-top: 80px;
+  margin-bottom: 120px;
+}
+
+.article-title {
+  /* перенос сделан с помощью max width:  */
+  max-width: 596px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  margin-bottom: 40px;
+}
+
+.article-title-large {
+  font-size: 48px;
+}
+
+.article-title-normal {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.article-text-bottom {
+  margin-bottom: 80px;
+}
+
+.img-gym {
+  margin-bottom: 80px;
+  max-width: 1220px;
+  /* width 100%, иначе будет вылезать */
+  width: 100%;
+  height: 512;
+}
+
+.article-list {
+  padding-left: 14px ;
+}
+
+.article-item {
+  margin-bottom: 12px;
+  font-family: ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.video {
+  width: 100%;
+  width: 1220px;
+  height: 686px;
+  margin-bottom: 40px;
+}
