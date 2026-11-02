@@ -28,6 +28,10 @@ a {
   align-items: center;
 }
 
+.flexbox-nav {
+    margin-left: 40px;
+}
+
 .nav-panel {
   display: inline;
   text-decoration: underline;
