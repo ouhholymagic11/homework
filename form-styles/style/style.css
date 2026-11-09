@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+input,
+textarea,
+button {
+  display: block;
+}
+
+.form {
+  border: 1px solid #5c5b5b;
+  border-radius: 8px;
+  max-width: 450px;
+  width: 100%;
+  max-height: 600px;
+  padding: 20px 30px 30px 20px;
+}
+
+.label,
+.input-zone {
+  width: 100%;
+}
+
+.form-group-title {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.form-group {
+
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  max-height: 200px;
+  resize: vertical;
+}
+
+.checkbox-label {
+  padding-left: 22px;
+}
+
+.checkbox {
+  position: absolute;
+  outline: none;
+  appearance: none; /* сброс внешнего вида элемента */
+  display: inline;
+  margin-bottom: 15px;
+
+  /* accent-color: #bd2fdaf5 ; */
+}
+
+.checkbox:checked::after{
+    background: url("../img/check-icon.svg") no-repeat center, #bd2fdaf5 ;
+    
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  margin-left: -22px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-zone {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  min-width: 250px;
+  min-height: 32px;
+  padding-left: 8px;
+}
+
+.button {
+  border: 1px solid #14141425;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #5c5b5b;
+  background-color: #bd2fdaf5;
+  transition:
+    box-shadow 0.2s,
+    opacity 0.6s;
+}
+
+.button:hover {
+  opacity: 0.5;
+  /* background-color: #d65deebb; */
+  box-shadow: 1px 2px 3px #35353554;
+}
+
+.button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):active {
+  background-color: #6b0780bb;
+}
+
+.input-zone:focus-visible,
+.button:focus-visible,
+.checkbox:focus-visible::after {
+  outline: 3px outset #bd2fdaf5;
+  outline-offset: 2px;
+}
+
+.input-zone:disabled {
+  opacity: 0.2;
+}
