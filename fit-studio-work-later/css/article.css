@@ -1,0 +1,118 @@
+
+
+.article {
+  padding-top: 80px;
+  margin-bottom: 120px;
+}
+
+.article-title {
+  /* перенос сделан с помощью max width:  */
+  max-width: 596px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  margin-bottom: 40px;
+}
+
+.article-title-large {
+  font-size: 48px;
+}
+
+.article-title-normal {
+  font-size: 36px;
+}
+
+.article-text {
+  margin-bottom: 20px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.article-text-bottom {
+  margin-bottom: 80px;
+}
+
+.article-img-decor-wrapper {
+  position: relative;
+}
+
+
+.article-img-decor-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: url(../images/decor-icon.svg) ;
+  width: 528px;
+  height: 48px;
+}
+
+.article-img-decor-wrapper-1::before {
+  top: 100px;
+  left: -350px;
+
+}
+
+.img-gym {
+  margin-bottom: 80px;
+  max-width: 1220px;
+  /* width 100%, иначе будет вылезать */
+  width: 100%;
+  height: 512;
+}
+
+.article-list {
+  padding-left: 24px;
+}
+
+.article-item {
+  margin-bottom: 12px;
+  font-family: ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.article-item::marker {
+  font-size: 20px;
+  color: #3596ED ;
+}
+
+.video {
+  width: 100%;
+  width: 1220px;
+  height: 512px;
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+
+.article-img-decor-wrapper-2::before {
+  top: 409px;
+  right: -350px;
+}
+
+.decor-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3596ED ;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 226px;
+  left: 580px;
+  cursor: pointer;
+  transform: translate(-11%, -22%);
+}
+
+.img-icon {
+  transform: translateX(3px);
+}
+
