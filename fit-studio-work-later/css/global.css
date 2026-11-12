@@ -35,3 +35,36 @@ a {
   /* Это центрирование контента внутри контейнера */
   padding: 0 10px;
 }
+
+.text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+}
+
+.article-title {
+  /* перенос сделан с помощью max width:  */
+  max-width: 596px;
+  font-size: 48px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  margin-bottom: 40px;
+}
+
+.article-title-normal {
+  font-size: 36px;
+}
+
+.text-sub {
+font-family: "Ubuntu";
+font-weight: 300;
+font-size: 14px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #858E8A;
+}
