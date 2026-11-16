@@ -31,8 +31,7 @@ a {
 
 .container {
   max-width: 1240px;
-  margin: 0 auto;
-  /* Это центрирование контента внутри контейнера */
+  margin: 0 auto; /* Это центрирование контента внутри контейнера */
   padding: 0 10px;
 }
 
@@ -56,6 +55,14 @@ a {
   margin-bottom: 40px;
 }
 
+.article-title-medium {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 0;
+  max-width: 700px;
+}
+
+
 .article-title-normal {
   font-size: 36px;
 }
@@ -67,4 +74,13 @@ font-size: 14px;
 letter-spacing: 0.04em;
 text-transform: uppercase;
 color: #858E8A;
+}
+
+a:focus-visible, button:focus-visible, .button:focus-visible, summary:focus-visible {
+  outline: 2px solid #3596ed;
+  outline-offset: 1px;
+}
+
+details > p { /* выбор элементов первого уровня вложенности */
+  padding: 0px 20px 20px;
 }
