@@ -36,6 +36,11 @@ img {
   object-fit: cover;
 }
 
+
+.phone {
+  text-align: end;
+}
+
 .container {
   max-width: 1240px;
   margin: 0 auto; /* Это центрирование контента внутри контейнера */
@@ -122,13 +127,4 @@ details > p {
   }
 }
 
-@media (width <=576px) {
-  .section {
-    margin-bottom: 80px;
-  }
-
-  .article-title {
-    font-size: 34px;
-  }
-}
 

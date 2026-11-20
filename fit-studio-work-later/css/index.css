@@ -81,7 +81,6 @@
   background: rgba(255, 255, 255, 0.9);
 }
 
-
 .section {
   margin-bottom: 140px;
 }
@@ -170,8 +169,6 @@
   gap: 28px;
 }
 
-
-
 summary {
   display: flex;
   align-items: center;
@@ -202,8 +199,6 @@ details[open] summary::after {
 }
 
 details {
-  
-  min-width: 700px;
   margin-bottom: 20px;
   border-block: 1px solid #d3cbd9;
   /* border-block создаёт границы сверху и снизу */
@@ -266,7 +261,6 @@ details:last-child {
   .faq::before {
     display: none;
   }
-
 }
 
 @media (width <=768px) {
@@ -290,13 +284,20 @@ details:last-child {
     font-size: 22px;
   }
 
-    details {
-    min-width: auto ;
+  details {
+    min-width: auto;
   }
-
 }
 
 @media (width <=576px) {
+  .section {
+    margin-bottom: 60px;
+  }
+
+  .article-title {
+    font-size: 34px;
+  }
+
   .hero {
     margin-top: 40px;
   }
@@ -306,13 +307,9 @@ details:last-child {
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
-  .article-title {
-    font-size: 28px;
-  }
-    
   .hero-choose {
     padding: 10px;
     font-size: 14px;
