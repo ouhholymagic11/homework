@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 375px;
 }
 
 h1,
@@ -26,7 +27,13 @@ p {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .container {
@@ -62,25 +69,66 @@ a {
   max-width: 700px;
 }
 
-
 .article-title-normal {
   font-size: 36px;
 }
 
 .text-sub {
-font-family: "Ubuntu";
-font-weight: 300;
-font-size: 14px;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: #858E8A;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #858e8a;
 }
 
-a:focus-visible, button:focus-visible, .button:focus-visible, summary:focus-visible {
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+summary:focus-visible {
   outline: 2px solid #3596ed;
   outline-offset: 1px;
 }
 
-details > p { /* выбор элементов первого уровня вложенности */
+details > p {
+  /* выбор элементов первого уровня вложенности */
   padding: 0px 20px 20px;
 }
+
+.decor::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: calc(50% - 250px);
+  height: 48px;
+  background: url(../images/decor-icon-large.svg) repeat-x;
+}
+
+@media (width <= 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    max-width: 576px;
+  }
+
+  .article-title {
+    text-align: center;
+    max-width: none;
+    font-size: 40px;
+  }
+}
+
+@media (width <=576px) {
+  .section {
+    margin-bottom: 80px;
+  }
+
+  .article-title {
+    font-size: 34px;
+  }
+}
+

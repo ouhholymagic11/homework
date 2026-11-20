@@ -1,10 +1,7 @@
-
-
 .article {
   padding-top: 80px;
   margin-bottom: 120px;
 }
-
 
 .article-text {
   margin-bottom: 20px;
@@ -23,12 +20,10 @@
   position: relative;
 }
 
-
-.article-img-decor-wrapper::before {
+.decor::before {
   content: "";
   position: absolute;
   z-index: -1;
-  background: url(../images/decor-icon.svg) ;
   width: 528px;
   height: 48px;
 }
@@ -36,15 +31,11 @@
 .article-img-decor-wrapper-1::before {
   top: 100px;
   left: -350px;
-
 }
 
 .img-gym {
   margin-bottom: 80px;
-  max-width: 1220px;
   /* width 100%, иначе будет вылезать */
-  width: 100%;
-  height: 512;
 }
 
 .article-list {
@@ -62,29 +53,30 @@
 
 .article-item::marker {
   font-size: 20px;
-  color: #3596ED ;
+  color: #3596ed;
+}
+
+.article-img-decor-wrapper-2::before {
+  top: 328px;
+  right: -350px;
 }
 
 .video {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   width: 1220px;
   height: 512px;
   margin-bottom: 40px;
   object-fit: cover;
 }
 
-.article-img-decor-wrapper-2::before {
-  top: 409px;
-  right: -350px;
-}
-
-.decor-play  {
+.decor-play {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: #3596ED ;
+  background-color: #3596ed;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -101,5 +93,54 @@
 
 .decor-play:hover {
   opacity: 0.8;
+}
+
+@media (width <=1440px) {
+  .video {
+    height: auto;
+  }
+
+  .decor-play {
+    display: none;
+  }
+
+  .decor::before {
+    display: none;
+  }
+}
+
+@media (width <=768px) {
+  .article {
+    padding-top: 60px;
+  }
+
+  .img-gym {
+    margin-bottom: 60px;
+  }
+
+  .article-text-bottom {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width <=576px) {
+  .img-gym {
+    margin-bottom: 0px;
+  }
+
+  .article-title {
+    font-size: 30px;
+  }
+
+}
+
+@media (width <=375px) {
+  .header-inner {
+    gap: 0px;
+  }
+
+  .article {
+    margin-bottom: 40px;
+  }
 }
 
