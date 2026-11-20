@@ -306,9 +306,13 @@ details:last-child {
   }
 
   .hero h1 {
-    font-size: 26px;
+    font-size: 32px;
   }
 
+  .article-title {
+    font-size: 28px;
+  }
+    
   .hero-choose {
     padding: 10px;
     font-size: 14px;
