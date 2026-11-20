@@ -56,7 +56,7 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #3596ed;
-  transition: opacity 0.2s background-color 0.2s;
+  transition: opacity 0.2s, background-color 0.2s;
 }
 
 .button:hover {
