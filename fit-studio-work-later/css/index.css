@@ -308,6 +308,7 @@ details:last-child {
 
   .hero h1 {
     font-size: 32px;
+    margin-bottom: 30px;
   }
 
   .hero-choose {
