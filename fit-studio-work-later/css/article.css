@@ -1,9 +1,13 @@
-.article {
+.column {
   padding-top: 80px;
   margin-bottom: 120px;
 }
 
-.article-text {
+.article {
+  margin-bottom: 80px;
+}
+
+.article__text {
   margin-bottom: 20px;
   font-family: Ubuntu, sans-serif;
   font-weight: 400px;
@@ -12,37 +16,24 @@
   color: #535755;
 }
 
-.article-text-bottom {
+.article__text--bottom {
   margin-bottom: 80px;
 }
 
-.article-img-decor-wrapper {
+.decor__wrapper {
   position: relative;
 }
 
-.decor::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 528px;
-  height: 48px;
-}
-
-.article-img-decor-wrapper-1::before {
+.decor__wrapper--top::before {
   top: 100px;
   left: -350px;
 }
 
-.img-gym {
-  margin-bottom: 80px;
-  /* width 100%, иначе будет вылезать */
-}
-
-.article-list {
+.article__list {
   padding-left: 24px;
 }
 
-.article-item {
+.article__list-item {
   margin-bottom: 12px;
   font-family: ubuntu, sans-serif;
   font-weight: 400;
@@ -51,12 +42,12 @@
   color: #535755;
 }
 
-.article-item::marker {
+.article__list-item::marker {
   font-size: 20px;
   color: #3596ed;
 }
 
-.article-img-decor-wrapper-2::before {
+.decor__wrapper--bottom::before {
   top: 328px;
   right: -350px;
 }
@@ -70,7 +61,7 @@
   object-fit: cover;
 }
 
-.decor-play {
+.decor__play {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,11 +78,11 @@
   transition: opacity 0.2s;
 }
 
-.decor-play img {
+.decor__play-icon {
   transform: translateX(2px);
 }
 
-.decor-play:hover {
+.decor__play:hover {
   opacity: 0.8;
 }
 
@@ -100,7 +91,7 @@
     height: auto;
   }
 
-  .decor-play {
+  .decor__play {
     display: none;
   }
 
@@ -111,36 +102,38 @@
 
 @media (width <=768px) {
   .article {
+    margin-bottom: 30px;
+  }
+
+  .column {
     padding-top: 60px;
   }
 
-  .img-gym {
+  .article__image {
     margin-bottom: 60px;
   }
 
-  .article-text-bottom {
+  .article__text--bottom {
     margin-bottom: 60px;
   }
 }
 
 @media (width <=576px) {
-  .img-gym {
+  .article__image {
     margin-bottom: 0px;
   }
 
-  .article-title {
+  .heading {
     font-size: 30px;
   }
-
 }
 
 @media (width <=375px) {
-  .header-inner {
+  .header__inner {
     gap: 0px;
   }
 
-  .article {
+  .column {
     margin-bottom: 40px;
   }
 }
-

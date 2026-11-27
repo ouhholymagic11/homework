@@ -1,29 +1,36 @@
-.header-inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #D3CBD9 ;
+  border-bottom: 1px solid #d3cbd9;
   gap: 10px;
 }
 
-.phone {
-text-transform: uppercase;
+.header__info {
+  text-align: end;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #858e8a;
 }
 
-
-.phone p {
-    margin-bottom: 8px ;
+.header__info-text {
+  margin-bottom: 8px;
 }
 
-.phone a {
-font-weight: 500;
-font-size: 18px;
-color: #2C332F;
-transition: color 0.2s;
+.header__info-phone {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2c332f;
+  transition: color 0.2s;
 }
 
-.phone a:hover {
-    color: #3596ED;
+.header__info-phone:hover {
+    color: #3596ed;
 }
+

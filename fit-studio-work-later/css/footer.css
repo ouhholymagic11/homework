@@ -10,18 +10,18 @@
   text-align: center;
 }
 
-.footer-top {
+.footer__section-top {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 40px;
   margin-bottom: 40px;
 }
 
-.footer-logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 40px;
 }
 
-.menu ul {
+.footer__menu {
   display: flex;
   list-style: none;
   margin: 0;
@@ -31,7 +31,7 @@
   align-items: center;
 }
 
-.menu a {
+.footer__menu-link {
   font-family: "Ubuntu";
   font-weight: 400;
   font-size: 16px;
@@ -55,7 +55,7 @@
 /* 1200px - 992px - 768px - 576px - 375px    - 320px  */
 
 @media (max-width: 768px)  {
-  .menu ul {
+  .footer__menu {
     flex-direction: column;
     gap: 25px
   }

@@ -36,11 +36,6 @@ img {
   object-fit: cover;
 }
 
-
-.phone {
-  text-align: end;
-}
-
 .container {
   max-width: 1240px;
   margin: 0 auto; /* Это центрирование контента внутри контейнера */
@@ -55,7 +50,7 @@ img {
   color: #535755;
 }
 
-.article-title {
+.heading {
   /* перенос сделан с помощью max width:  */
   max-width: 596px;
   font-size: 48px;
@@ -67,24 +62,15 @@ img {
   margin-bottom: 40px;
 }
 
-.article-title-medium {
+.heading--medium {
   font-weight: 500;
   font-size: 24px;
   margin-bottom: 0;
   max-width: 700px;
 }
 
-.article-title-normal {
+.heading--normal {
   font-size: 36px;
-}
-
-.text-sub {
-  font-family: "Ubuntu";
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #858e8a;
 }
 
 a:focus-visible,
@@ -120,11 +106,13 @@ details > p {
     max-width: 576px;
   }
 
-  .article-title {
+  .heading {
+    text-align: center;
+  }
+
+  .heading--normal {
     text-align: center;
     max-width: none;
     font-size: 40px;
   }
 }
-
-

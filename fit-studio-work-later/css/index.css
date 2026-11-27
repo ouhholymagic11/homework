@@ -13,12 +13,16 @@
   background: url(../images/decor-icon-large.svg) repeat-x;
 }
 
-.hero-container {
+.container-hero {
   display: flex;
   gap: 28px;
 }
 
-.hero h1 {
+.hero__info {
+  max-width: 492px;
+}
+
+.hero__header {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 62px;
@@ -28,16 +32,12 @@
   margin-bottom: 40px;
 }
 
-.hero h1 strong {
+.hero__header--accent {
   color: #3596ed;
   font-weight: 600;
 }
 
-.hero-info {
-  max-width: 492px;
-}
-
-.hero-info .text {
+.hero__article {
   margin-bottom: 140px;
   max-width: 439px;
 }
@@ -56,19 +56,23 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #3596ed;
-  transition: opacity 0.2s, background-color 0.2s;
+  transition: opacity 0.2s background-color 0.2s;
+}
+
+.button:active {
+  background-color: #1d507e;
 }
 
 .button:hover {
   opacity: 0.75;
 }
 
-.hero-images {
+.hero__images {
   position: relative;
   display: flex;
 }
 
-.hero-choose {
+.hero__choose {
   position: absolute;
   top: 40px;
   left: 50%;
@@ -85,11 +89,16 @@
   margin-bottom: 140px;
 }
 
-.index-title {
+.news__title {
   max-width: 492px;
 }
 
-.news-article {
+.news__cards {
+  display: flex;
+  gap: 28px;
+}
+
+.news__article {
   display: flex;
   flex-direction: column;
   flex: 1 1 25%;
@@ -99,30 +108,30 @@
   overflow: hidden;
 }
 
-.news-article img {
+.news__image {
   display: block;
 }
 
-.news-info {
+.news__article-info {
   padding: 20px 20px 0px;
   margin-bottom: 12px;
 }
 
-.news-date {
+.news__article-date {
   display: inline-block;
   margin-bottom: 8px;
 }
 
-.news-article footer {
+.news__article-footer {
   padding: 0px 20px 20px;
   margin-top: auto; /* в flex: column или row элементах прижимает элемент максимально вниз */
 }
 
-.news-info h3 {
+.news__article-text {
   color: #2c332f;
 }
 
-.news-article footer a {
+.news__article-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -133,12 +142,7 @@
   color: #3596ed;
 }
 
-.news-cards {
-  display: flex;
-  gap: 28px;
-}
-
-.news-article footer a::after {
+.news__article-link::after {
   content: "";
   display: inline-block;
   width: 22px;
@@ -147,12 +151,8 @@
   transition: transform 0.2s;
 }
 
-.news-article footer a:hover::after {
+.news__article-link:hover::after {
   transform: translateX(3px);
-}
-
-.button:active {
-  background-color: #1d507e;
 }
 
 .faq {
@@ -163,13 +163,24 @@
   top: 215px;
 }
 
-.faq-container {
+.faq__container {
   display: flex;
   align-items: flex-start;
   gap: 28px;
 }
 
-summary {
+.faq__accordion-details {
+  margin-bottom: 20px;
+  border-block: 1px solid #d3cbd9;
+  /* border-block создаёт границы сверху и снизу */
+}
+
+.faq__accordion-details:last-child {
+  margin-bottom: 0;
+}
+
+
+.faq__accordion-summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -180,11 +191,11 @@ summary {
   user-select: none;
 }
 
-summary::-webkit-details-marker {
+.faq__accordion-summary::-webkit-details-marker {
   display: none;
 }
 
-summary::after {
+.faq__accordion-summary::after {
   content: "";
   display: inline-block;
   flex-shrink: 0;
@@ -194,28 +205,19 @@ summary::after {
 }
 
 /* [] обозначают селектор по атрибуту */
-details[open] summary::after {
+.faq__accordion-details[open] .faq__accordion-summary::after {
   transform: rotate(180deg);
 }
 
-details {
-  margin-bottom: 20px;
-  border-block: 1px solid #d3cbd9;
-  /* border-block создаёт границы сверху и снизу */
-}
-
-details:last-child {
-  margin-bottom: 0;
-}
 
 @media (width <= 1440px) {
-  .hero-images img {
+  .hero__images img {
     width: 50%;
   }
 }
 
 @media (width <= 992px) {
-  .hero-container {
+  .container-hero {
     flex-direction: column;
     align-items: center;
   }
@@ -224,36 +226,36 @@ details:last-child {
     display: none;
   }
 
-  .hero-info {
+  .hero__info {
     text-align: center;
   }
   /* initial берёт стандартные значения у браузера, inherit берёт значения у ближайшего родителя у которого это значение есть  */
 
-  .hero h1 {
+  .hero__header {
     font-size: 52px;
   }
 
-  .hero-info .text {
+  .hero__article .text {
     max-width: inherit;
     margin-bottom: 30px;
   }
 
-  .news-cards {
+  .news__cards {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
 
-  .news-article {
+  .news__article {
     flex-basis: 50%;
     max-width: 350px;
   }
 
-  .news-article img {
+  .news__image {
     width: auto;
   }
 
-  .faq-container {
+  .faq__container {
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -264,27 +266,27 @@ details:last-child {
 }
 
 @media (width <=768px) {
-  .hero h1 {
+  .hero__header {
     font-size: 48px;
   }
 
-  .news-article {
+  .news__article {
     flex-basis: 100%;
     max-width: 400px;
   }
 
-  .index-title {
+  .news__title {
     max-width: none;
     text-align: center;
     margin-bottom: 30px;
   }
 
-  .article-title-medium {
+   .article-title-medium {
     text-align: initial;
     font-size: 22px;
-  }
+  } 
 
-  details {
+  .faq__accordion-details {
     min-width: auto;
   }
 }
@@ -302,16 +304,16 @@ details:last-child {
     margin-top: 40px;
   }
 
-  .hero-info {
+  .hero__info {
     max-width: 410px;
   }
 
-  .hero h1 {
+  .hero__header {
     font-size: 32px;
     margin-bottom: 30px;
   }
 
-  .hero-choose {
+  .hero__choose {
     padding: 10px;
     font-size: 14px;
     max-width: 125px;
